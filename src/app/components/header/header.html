@@ -22,15 +22,7 @@
       </ul>
     </nav>
 
-    <div class="header__tel">
-      <div class="header__tel-wrapper">
-        <img class="header__tel-image" src="/assets/images/Phone.svg" alt="Phone" />
-      </div>
-      <div class="header__tel-info">
-        <p class="header__tel-text">Need help?</p>
-        <a class="header__tel-number" href="tel:+9962471680">+996 247-1680</a>
-      </div>
-    </div>
+    <app-feedback-method [method]="feedbackMethods[3]" [wrapperStyle]="'purple'" />
   </div>
 
   @if (isMenuOpen) {
