@@ -1,0 +1,50 @@
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__feedback">
+      <app-logo />
+
+      <div class="footer__feedback-list">
+        @for (method of sliceFeedbackMethods; track method.id) {
+        <app-feedback-method [method]="method" [wrapperStyle]="'orange'" />
+        }
+      </div>
+    </div>
+
+    <div class="footer__info">
+      <div class="footer__info-social">
+        <h2 class="footer__info-social-title">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius ab aspernatur suscipit,
+          excepturi illum sequi odio autem delectus maiores. Sint.
+        </h2>
+        <div class="footer__info-social-link">
+          @for (social of socialLinks; track social.id) {
+          <a class="footer__info-social-link-wrapper" [href]="social.link" target="_blank">
+            <img class="footer__info-social-link-image" [src]="social.image" [alt]="social.text" />
+          </a>
+          }
+        </div>
+      </div>
+
+      @for (item of footerNavbarItems; track item.id) {
+      <nav class="footer__info-nav">
+        <ul class="footer__info-nav-list">
+          <li class="footer__info-nav-title">{{ item.title }}</li>
+          @for (i of item.items; track i.id) {
+          <a class="footer__info-nav-link" [routerLink]="i.link">
+            {{ i.text }}
+          </a>
+          }
+        </ul>
+      </nav>
+      }
+
+      <div class="footer__info-app">
+        <p class="footer__info-app-title">Download App</p>
+        <img class="footer__info-app-image" src="/assets/images/AppStore.png" alt="App Store" />
+        <img class="footer__info-app-image" src="/assets/images/GooglePlay.png" alt="Google Play" />
+      </div>
+    </div>
+
+    <p class="footer__copyright">&copy; Copyright Car Rental {{ year }}. Design by Figma. guru</p>
+  </div>
+</footer>

@@ -1,0 +1,9 @@
+<div class="method">
+  <div class="method-wrapper" [ngClass]="`method-wrapper--${wrapperStyle}`">
+    <img class="method-image" [src]="method.image" [alt]="method.title" />
+  </div>
+  <div class="method-info">
+    <p class="method-text">{{ method.title }}</p>
+    <a class="method-number" href="{{ method.href }}" target="_blank">{{ method.text }}</a>
+  </div>
+</div>
