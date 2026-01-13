@@ -1,0 +1,59 @@
+<header class="header">
+  <div class="header__container">
+    <button class="header__menu" type="button" (click)="toggleMenu()">
+      <img class="header__menu-image" src="/assets/images/MenuHamburger.svg" alt="burger-menu" />
+    </button>
+
+    <a class="header__logo" [routerLink]="['/']">
+      <img class="header__logo-image" src="/assets/images/Logo.svg" alt="Logo" />
+      <h1 class="header__logo-title">{{ 'Car Rental' | titlecase }}</h1>
+    </a>
+
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        @for (item of navbarItems; track item.id) {
+        <li class="header__nav-item">
+          <a
+            class="header__nav-item-link"
+            [routerLink]="item.link"
+            [routerLinkActive]="['header__nav-item-link--active']"
+          >
+            {{ item.text | titlecase }}
+          </a>
+        </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="header__tel">
+      <div class="header__tel-wrapper">
+        <img class="header__tel-image" src="/assets/images/Phone.svg" alt="Phone" />
+      </div>
+      <div class="header__tel-info">
+        <p class="header__tel-text">Need help?</p>
+        <a class="header__tel-number" href="tel:+9962471680">+996 247-1680</a>
+      </div>
+    </div>
+  </div>
+
+  @if (isMenuOpen) {
+  <div class="header__mobile-overlay" (click)="closeMenu()">
+    <nav class="header__mobile-nav" (click)="$event.stopPropagation()">
+      <ul class="header__mobile-nav-list">
+        @for (item of navbarItems; track item.id) {
+        <li class="header__mobile-nav-item">
+          <a
+            class="header__mobile-nav-item-link"
+            [routerLink]="item.link"
+            [routerLinkActive]="['header__nav-item-link--active']"
+            (click)="closeMenu()"
+          >
+            {{ item.text | titlecase }}
+          </a>
+        </li>
+        }
+      </ul>
+    </nav>
+  </div>
+  }
+</header>

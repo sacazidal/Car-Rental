@@ -1,0 +1,140 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.header {
+  padding: 28px 0;
+
+  .media(@lg, {
+    padding: 12px 0;
+  });
+
+  &__container {
+    .main-container();
+    .flex-between();
+
+    .media(@lg, {
+      position: relative;
+    });
+  }
+
+  &__menu {
+    z-index: 11;
+    .mobile();
+
+    &-image {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__logo {
+    .flex-header();
+
+    &-title {
+      font-family: @second-family;
+      .text(16, 700);
+    }
+  }
+
+  &__nav {
+    .desktop();
+
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &-item {
+      padding: 4px 12px;
+
+      &-link {
+        font-family: @second-family;
+        .text(18, 500);
+
+        &--active {
+          .text(18, 700) !important;
+        }
+      }
+    }
+  }
+
+  &__tel {
+    .flex-header();
+    .desktop(@sm);
+
+    &-wrapper {
+      .flex-center();
+      padding: 8px;
+      border-radius: @rounded-full;
+      background: @purple;
+    }
+
+    &-image {
+      width: 24px;
+      height: 24px;
+
+      .media(@lg, {
+        width: 20px;
+        height: 20px;
+      });
+    }
+
+    &-info {
+      .flex-column();
+    }
+
+    &-text {
+      .text(16, 400, @black, 163%);
+
+      .media(@lg, {
+        .text(14, 400, @black, 163%);
+      });
+    }
+
+    &-number {
+      .text(16, 600, @black, 163%);
+
+      .media(@lg, {
+        .text(14, 600, @black, 163%);
+      });
+    }
+  }
+
+  &__mobile {
+    &-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.5);
+      .flex-center();
+      padding: 0 10px;
+    }
+
+    &-nav {
+      background: #fff;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+      &-list {
+        .flex-column(24px);
+        align-items: center;
+      }
+
+      &-item {
+        padding: 4px 12px;
+
+        &-link {
+          font-family: @second-family;
+          .text(16, 500);
+        }
+      }
+    }
+  }
+}
