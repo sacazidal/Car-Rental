@@ -25,20 +25,20 @@
   padding: 45px 0;
 }
 
-.flex-between() {
+.flex-between(@gap: 10px, @align-items: center) {
   display: flex;
-  align-items: center;
+  align-items: @align-items;
   justify-content: space-between;
-  gap: 10px;
+  gap: @gap;
 }
 
-.flex-header() {
+.flex-header(@gap: 12px) {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: @gap;
 
   .media(@lg, {
-    gap: 8px;
+    gap: @gap - 4px;
   });
 }
 
