@@ -50,48 +50,6 @@
     }
   }
 
-  &__tel {
-    .flex-header();
-    .desktop(@sm);
-
-    &-wrapper {
-      .flex-center();
-      padding: 8px;
-      border-radius: @rounded-full;
-      background: @purple;
-    }
-
-    &-image {
-      width: 24px;
-      height: 24px;
-
-      .media(@lg, {
-        width: 20px;
-        height: 20px;
-      });
-    }
-
-    &-info {
-      .flex-column();
-    }
-
-    &-text {
-      .text(16, 400, @black, 163%);
-
-      .media(@lg, {
-        .text(14, 400, @black, 163%);
-      });
-    }
-
-    &-number {
-      .text(16, 600, @black, 163%);
-
-      .media(@lg, {
-        .text(14, 600, @black, 163%);
-      });
-    }
-  }
-
   &__mobile {
     &-overlay {
       position: fixed;
