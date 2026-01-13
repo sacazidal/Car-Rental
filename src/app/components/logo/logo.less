@@ -1,0 +1,13 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.logo {
+  .flex-header();
+
+  &-title {
+    font-family: @second-family;
+    .text(16, 700);
+
+    .desktop(@sm);
+  }
+}
