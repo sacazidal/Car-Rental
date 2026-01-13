@@ -1,1 +1,76 @@
 @import url(variables.less);
+
+.rem(@px) {
+  font-size: unit((@px / @base-font-size), rem);
+}
+
+.media(@max-width, @rules) {
+  @media (max-width: @max-width) {
+    @rules();
+  }
+}
+
+.main-container() {
+  max-width: @xl;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .media(@lg, {
+    padding: 0 10px;
+  });
+}
+
+.container() {
+  padding: 45px 0;
+}
+
+.flex-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.flex-header() {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .media(@lg, {
+    gap: 8px;
+  });
+}
+
+.flex-column(@gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: @gap;
+}
+
+.flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text(@px: 16, @font-weight: 400, @color: @black, @line-height: normal) {
+  .rem(@px);
+  font-weight: @font-weight;
+  line-height: @line-height;
+  color: @color;
+}
+
+.desktop(@max-width: @lg) {
+  .media(@max-width, {
+    display: none;
+  });
+}
+
+.mobile() {
+  display: none;
+
+  .media(@lg, {
+    display: block;
+  });
+}
