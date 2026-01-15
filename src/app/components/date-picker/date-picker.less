@@ -4,8 +4,16 @@
 .date-pick {
   width: 100%;
   padding: 9px 16px;
+  .text(16, 400, @black, 125%);
   border-radius: @rounded-md;
   border: none;
+  height: 36px;
+
+  &::-webkit-calendar-picker-indicator {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+  }
 
   &--gray {
     background: @minigray;
