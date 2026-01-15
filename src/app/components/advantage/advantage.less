@@ -1,0 +1,61 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.advantages {
+  .container();
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .media(@lg, {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    });
+
+    .media(@md, {
+      grid-template-columns: 1fr;
+    });
+  }
+
+  &__item {
+    .flex-column(20px);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &:nth-child(3) {
+      .media(@lg, {
+        grid-column: 1 / -1;
+        max-width: 50%;
+      });
+
+      .media(@md, {
+        max-width: 100%;
+      });
+    }
+
+    .media(@xl, {
+      gap: 15px;
+    });
+  }
+
+  &__image {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__title {
+    .text(24, 600);
+  }
+
+  &__subtitle {
+    .text(16, 400, @black, 150%);
+    text-align: center;
+
+    .media(@xl, {
+      .rem(15);
+    });
+  }
+}
