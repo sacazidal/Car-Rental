@@ -1,6 +1,10 @@
 @import url(../../../styles/variables.less);
 @import url(../../../styles/mixins.less);
 
+:host {
+  z-index: 15;
+}
+
 .header {
   padding: 28px 0;
 
@@ -18,7 +22,6 @@
   }
 
   &__menu {
-    z-index: 11;
     .mobile();
 
     &-image {
