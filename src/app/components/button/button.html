@@ -1,0 +1,8 @@
+<button
+  [class]="`btn ${full ? 'btn--width' : ''}`"
+  [ngClass]="`btn--${backgroundStyle}`"
+  [type]="type"
+  (click)="link()"
+>
+  {{ text }}
+</button>

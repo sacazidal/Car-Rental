@@ -1,0 +1,40 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.wrapper {
+  position: relative;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 11px;
+  right: 20px;
+}
+
+.select {
+  width: 100%;
+  padding: 9px 16px;
+  border-radius: @rounded-md;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  :nth-child(1) {
+    display: none;
+  }
+
+  &--gray {
+    background: @minigray;
+  }
+
+  &--purple {
+    background: @minipurple;
+  }
+
+  &__option {
+    .text(16, 400, @black, 125%);
+  }
+}

@@ -1,0 +1,43 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+:host {
+  width: 100%;
+  max-width: 416px;
+  z-index: 10;
+}
+
+.form {
+  padding: 40px;
+  border-radius: @rounded-lg;
+  .flex-column(40px);
+
+  .media(@lg, {
+    padding: 25px;
+  });
+
+  &--white {
+    background: @white;
+  }
+
+  &--purple {
+    background: @purple;
+  }
+
+  &__title {
+    .text(28, 600);
+    text-align: center;
+
+    &--white {
+      color: @white;
+    }
+
+    &--black {
+      color: @black;
+    }
+  }
+
+  &__group {
+    .flex-column(20px);
+  }
+}

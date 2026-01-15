@@ -1,0 +1,12 @@
+<div class="wrapper">
+  @if (isOpen) {
+  <img class="arrow" src="/assets/images/ArrowUp.svg" alt="arrow-up" />
+  } @else {
+  <img class="arrow" src="/assets/images/ArrowDown.svg" alt="arrow-down" />
+  }
+  <select [class]="`select select--${backgroundStyle}`" (click)="toggleMenu()">
+    <option class="select__option" value="">{{ desc }}</option>
+    <option class="select__option" value="bmw m5 f901">BMW M5 F901</option>
+    <option class="select__option" value="bmw m5 f902">BMW M5 F902</option>
+  </select>
+</div>
