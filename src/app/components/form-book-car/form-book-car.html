@@ -1,0 +1,11 @@
+<form [class]="`form form--${backgroundStyle}`">
+  <p [class]="`form__title ${colorStyle}`">Book your car</p>
+  <div class="form__group">
+    <app-select desc="Car type"></app-select>
+    <app-select desc="Place of rental"></app-select>
+    <app-select desc="Place of return"></app-select>
+    <app-date-picker></app-date-picker>
+    <app-date-picker></app-date-picker>
+  </div>
+  <app-button type="submit" [full]="true" text="Book now"></app-button>
+</form>
