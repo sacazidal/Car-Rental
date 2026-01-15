@@ -1,0 +1,62 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.info {
+  .container();
+
+  &__container {
+    .flex-between(20px);
+
+    .media(@lg, {
+      .flex-column(40px);
+    });
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    border-radius: @rounded-lg;
+    .flex-center();
+  }
+
+  &__list {
+    .flex-column(28px);
+    max-width: 550px;
+
+    &-item {
+      .flex-column(20px);
+    }
+
+    &-upper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &-numbering {
+      .flex-center();
+      padding: 5px 10px;
+      width: 32px;
+      height: 32px;
+      border-radius: @rounded-full;
+      background: @purple;
+      .text(16, 600, @white);
+    }
+
+    &-title {
+      .text(20, 600);
+
+      .media(@xl, {
+        .text(18, 600);
+      });
+    }
+
+    &-text {
+      .text(16, 400, @gray);
+
+      .media(@xl, {
+        .text(14, 400);
+      });
+    }
+  }
+}

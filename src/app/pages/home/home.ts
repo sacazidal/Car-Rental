@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from '../../components/hero/hero';
 import { AdvantageComponent } from '../../components/advantage/advantage';
+import { InfoComponent } from '../../components/info/info';
 
 @Component({
   selector: 'app-home',
-  imports: [HeroComponent, AdvantageComponent],
+  imports: [HeroComponent, AdvantageComponent, InfoComponent],
   templateUrl: './home.html',
   styleUrl: './home.less',
 })
