@@ -1,0 +1,11 @@
+<section class="advantages">
+  <div class="advantages__container">
+    @for (advantage of advantages; track advantage.id) {
+    <div class="advantages__item">
+      <img class="advantages__image" [src]="advantage.image" [alt]="advantage.title" />
+      <h4 class="advantages__title">{{ advantage.title }}</h4>
+      <p class="advantages__subtitle">{{ advantage.text }}</p>
+    </div>
+    }
+  </div>
+</section>
