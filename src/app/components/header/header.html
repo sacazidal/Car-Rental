@@ -9,40 +9,40 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         @for (item of navbarItems; track item.id) {
-        <li class="header__nav-item">
-          <a
-            class="header__nav-item-link"
-            [routerLink]="item.link"
-            [routerLinkActive]="['header__nav-item-link--active']"
-          >
-            {{ item.text | titlecase }}
-          </a>
-        </li>
+          <li class="header__nav-item">
+            <a
+              class="header__nav-item-link"
+              [routerLink]="item.link"
+              [routerLinkActive]="['header__nav-item-link--active']"
+            >
+              {{ item.text | titlecase }}
+            </a>
+          </li>
         }
       </ul>
     </nav>
 
-    <app-feedback-method [method]="feedbackMethods[3]" [wrapperStyle]="'purple'" />
+    <app-feedback-method [method]="feedbackMethods[3]" wrapperStyle="purple" />
   </div>
 
   @if (isMenuOpen) {
-  <div class="header__mobile-overlay" (click)="closeMenu()">
-    <nav class="header__mobile-nav" (click)="$event.stopPropagation()">
-      <ul class="header__mobile-nav-list">
-        @for (item of navbarItems; track item.id) {
-        <li class="header__mobile-nav-item">
-          <a
-            class="header__mobile-nav-item-link"
-            [routerLink]="item.link"
-            [routerLinkActive]="['header__nav-item-link--active']"
-            (click)="closeMenu()"
-          >
-            {{ item.text | titlecase }}
-          </a>
-        </li>
-        }
-      </ul>
-    </nav>
-  </div>
+    <div class="header__overlay--mobile" (click)="closeMenu()">
+      <nav class="header__nav--mobile" (click)="$event.stopPropagation()">
+        <ul class="header__nav-list">
+          @for (item of navbarItems; track item.id) {
+            <li class="header__nav-item">
+              <a
+                class="header__nav-item-link"
+                [routerLink]="item.link"
+                [routerLinkActive]="['header__nav-item-link--active']"
+                (click)="closeMenu()"
+              >
+                {{ item.text | titlecase }}
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+    </div>
   }
 </header>

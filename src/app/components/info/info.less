@@ -8,7 +8,8 @@
     .flex-between(20px);
 
     .media(@lg, {
-      .flex-column(40px);
+      flex-direction: column;
+      gap: 40px;
     });
   }
 
@@ -27,7 +28,7 @@
       .flex-column(20px);
     }
 
-    &-upper {
+    &-group {
       display: flex;
       align-items: center;
       gap: 16px;
@@ -35,28 +36,20 @@
 
     &-numbering {
       .flex-center();
-      padding: 5px 10px;
       width: 32px;
       height: 32px;
       border-radius: @rounded-full;
       background: @purple;
-      .text(16, 600, @white);
+      .subtitle(@white);
+      font-weight: 600;
     }
 
     &-title {
-      .text(20, 600);
-
-      .media(@xl, {
-        .text(18, 600);
-      });
+      .title-md();
     }
 
     &-text {
-      .text(16, 400, @gray);
-
-      .media(@xl, {
-        .text(14, 400);
-      });
+      .subtitle(@gray);
     }
   }
 }

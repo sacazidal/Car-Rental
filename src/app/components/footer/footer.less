@@ -13,11 +13,11 @@
     .flex-column(60px);
 
     .media(@lg, {
-      .flex-column(40px);
+      gap: 40px;
     });
 
     .media(@sm, {
-      .flex-column(30px);
+      gap: 30px;
     });
   }
 
@@ -26,10 +26,6 @@
 
     .media(@md, {
       .flex-column(20px);
-    });
-
-    .media(@sm, {
-      justify-content: center;
     });
 
     &-list {
@@ -41,8 +37,9 @@
     .flex-between(10px, stretch);
 
     .media(@sm, {
-      .flex-column(20px);
+      flex-direction: column;
       align-items: center;
+      gap: 20px;
     });
 
     &-social {
@@ -50,18 +47,15 @@
       justify-content: space-between;
 
       .media(@sm, {
-        .flex-column(20px);
+        gap: 20px;
         align-items: center;
       });
 
       &-title {
-        .text(20, 600, @black, 140%);
+        .title-md();
+        line-height: 140%;
         max-width: 280px;
         width: 100%;
-
-        .media(@lg, {
-          .text(16, 600, @black, 140%);
-        });
 
         .media(@sm, {
           text-align: center;
@@ -91,7 +85,7 @@
         .flex-column(16px);
 
         .media(@lg, {
-          .flex-column(12px);
+          gap: 12px;
         });
 
         .media(@sm, {
@@ -101,20 +95,12 @@
 
       &-title {
         margin-bottom: 8px;
-        .text(20, 600);
-
-        .media(@lg, {
-          margin-bottom: 6px;
-          .text(18, 600);
-        });
+        .title-md();
       }
 
       &-link {
-        .text(16, 400, @black, 163%);
-
-        .media(@lg, {
-          .text(14, 400, @black, 163%);
-        });
+        .subtitle();
+        line-height: 163%;
       }
     }
 
@@ -122,7 +108,7 @@
       .flex-column(24px);
 
       .media(@lg, {
-        .flex-column(14px);
+        gap: 14px;
       });
 
       .desktop(@md);
@@ -133,11 +119,7 @@
       });
 
       &-title {
-        .text(20, 600);
-
-        .media(@lg, {
-          .text(18, 600);
-        });
+        .title-md();
       }
 
       &-image {
@@ -155,16 +137,14 @@
   }
 
   &__copyright {
+    .rem(14);
     font-family: @second-family;
     text-align: center;
-    .text(14, 400, @gray, 186%);
+    color: @gray;
+    line-height: 186%;
 
-    .media(@lg, {
-      .text(12, 400, @gray, 186%);
-    });
-
-    .media(@sm, {
-      .text(10, 400, @gray, 186%);
+    .media(@md, {
+      .rem(12);
     });
   }
 }

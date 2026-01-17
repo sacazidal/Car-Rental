@@ -5,13 +5,13 @@
     </div>
     <div class="info__list">
       @for (info of infos; track info.id) {
-      <div class="info__list-item">
-        <div class="info__list-upper">
-          <div class="info__list-numbering">{{ info.id }}</div>
-          <h5 class="info__list-title">{{ info.title }}</h5>
+        <div class="info__list-item">
+          <div class="info__list-group">
+            <div class="info__list-numbering">{{ info.id }}</div>
+            <h5 class="info__list-title">{{ info.title }}</h5>
+          </div>
+          <p class="info__list-text">{{ info.text }}</p>
         </div>
-        <p class="info__list-text">{{ info.text }}</p>
-      </div>
       }
     </div>
   </div>
