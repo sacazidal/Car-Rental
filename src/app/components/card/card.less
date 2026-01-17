@@ -37,19 +37,24 @@
   }
 
   &__name {
-    .text(24, 600);
+    .title-lg();
   }
 
   &__class {
-    .text(16, 400, @gray);
+    .subtitle(@gray);
   }
 
   &__price {
-    .text(24, 600, @purple);
+    .title-lg();
   }
 
   &__per-day {
-    .text(14, 400, @gray);
+    .rem(14);
+    text-align: end;
+
+    .media(@lg, {
+      .rem(12);
+    });
   }
 
   &__property {
@@ -58,7 +63,7 @@
     gap: 8px;
 
     &-name {
-      .text(16, 400, @gray);
+      .subtitle(@gray);
     }
   }
 }

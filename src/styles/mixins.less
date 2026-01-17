@@ -76,6 +76,33 @@
   color: @color;
 }
 
+.title-lg(@font-weight: 600) {
+  .rem(24);
+  font-weight: @font-weight;
+
+  .media(@lg, {
+    .rem(20);
+  });
+}
+
+.title-md(@font-weight: 600) {
+  .rem(20);
+  font-weight: @font-weight;
+
+  .media(@lg, {
+    .rem(16);
+  });
+}
+
+.subtitle(@color: @black) {
+  .rem(16);
+  color: @color;
+
+  .media(@lg, {
+    .rem(14);
+  });
+}
+
 .desktop(@max-width: @lg) {
   .media(@max-width, {
     display: none;

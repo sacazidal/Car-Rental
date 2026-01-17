@@ -11,8 +11,11 @@
   &__item {
     .flex-column(20px);
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: flex-start;
+
+    .media(@lg, {
+      gap: 10px;
+    });
 
     &:nth-child(3) {
       .media(@lg, {
@@ -24,10 +27,6 @@
         max-width: 100%;
       });
     }
-
-    .media(@xl, {
-      gap: 15px;
-    });
   }
 
   &__image {
@@ -36,15 +35,12 @@
   }
 
   &__title {
-    .text(24, 600);
+    .title-lg();
   }
 
   &__subtitle {
-    .text(16, 400, @black, 150%);
+    .subtitle();
+    line-height: 150%;
     text-align: center;
-
-    .media(@xl, {
-      .rem(15);
-    });
   }
 }
