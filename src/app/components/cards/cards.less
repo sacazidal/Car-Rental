@@ -1,0 +1,20 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.cards {
+  margin-top: 40px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    .media(@lg, {
+      grid-template-columns: repeat(2, 1fr);
+    });
+
+    .media(@sm, {
+      grid-template-columns: repeat(1, 1fr);
+    });
+  }
+}
