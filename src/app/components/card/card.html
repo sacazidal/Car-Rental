@@ -1,0 +1,39 @@
+<article class="card">
+  <div class="card__container">
+    <div class="card__image">
+      <img src="/assets/images/1.svg" alt="mercedes" />
+    </div>
+
+    <div class="card__info">
+      <div class="card__info-base">
+        <div class="card__info-group">
+          <p class="card__name">Mercedes</p>
+          <p class="card__class">Sedan</p>
+        </div>
+        <div class="card__info-group">
+          <p class="card__price">{{ '25' | currency : 'USD' }}</p>
+          <p class="card__per-day">per day</p>
+        </div>
+      </div>
+
+      <div class="card__info-other">
+        <div class="card__property">
+          <img src="/assets/images/transmission-box.svg" alt="transmission-box" />
+          <p class="card__property-name">Automat</p>
+        </div>
+        <div class="card__property">
+          <img src="/assets/images/petrol.svg" alt="petrol" />
+          <p class="card__property-name">PB 95</p>
+        </div>
+        <div class="card__property">
+          <img src="/assets/images/conditioner.svg" alt="conditioner" />
+          <p class="card__property-name">Air Conditioner</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="">
+      <app-button [full]="true" backgroundStyle="purple" text="View Details"></app-button>
+    </a>
+  </div>
+</article>
