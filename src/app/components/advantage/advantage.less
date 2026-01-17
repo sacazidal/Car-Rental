@@ -5,18 +5,7 @@
   .container();
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-
-    .media(@lg, {
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-    });
-
-    .media(@md, {
-      grid-template-columns: 1fr;
-    });
+    .grid(30px, center);
   }
 
   &__item {
