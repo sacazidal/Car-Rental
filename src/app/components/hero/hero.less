@@ -2,11 +2,6 @@
 @import url(../../../styles/mixins.less);
 
 .hero {
-  background: @purple;
-  border-radius: @rounded-xl;
-  position: relative;
-  z-index: 11;
-
   &__car {
     position: absolute;
     max-width: 698px;
@@ -31,33 +26,24 @@
 
   &__protector {
     position: absolute;
-    max-width: 1254px;
+    max-width: 1234px;
     width: 100%;
     height: auto;
     top: 0;
     left: 0;
     .desktop(@md);
+
+    .media(@xl, {
+      max-width: 1174px;
+    });
   }
 
   &__container {
     .flex-between(20px, stretch);
-    padding: 78px 72px;
-
-    .media(@xl, {
-      padding: 56px 50px;
-    });
-
-    .media(@lg, {
-      padding: 48px 42px;
-    });
 
     .media(@md, {
       .flex-column(30px);
       align-items: center
-    });
-
-    .media(@sm, {
-      padding: 34px 26px;
     });
   }
 

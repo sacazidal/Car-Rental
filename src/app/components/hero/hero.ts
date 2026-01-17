@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ButtonComponent } from '../button/button';
 import { FormBookCarComponent } from '../form-book-car/form-book-car';
 import { TitleComponent } from '../title/title';
+import { SectionWrapperComponent } from '../section-wrapper/section-wrapper';
 
 @Component({
   selector: 'app-hero',
-  imports: [ButtonComponent, FormBookCarComponent, TitleComponent],
+  imports: [ButtonComponent, FormBookCarComponent, TitleComponent, SectionWrapperComponent],
   templateUrl: './hero.html',
   styleUrl: './hero.less',
 })

@@ -1,0 +1,22 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.wrapper {
+  background: @purple;
+  border-radius: @rounded-xl;
+  position: relative;
+  z-index: 11;
+  padding: 78px 72px;
+
+  .media(@xl, {
+    padding: 56px 50px;
+  });
+
+  .media(@lg, {
+    padding: 48px 42px;
+  });
+
+  .media(@sm, {
+    padding: 34px 26px;
+  });
+}
