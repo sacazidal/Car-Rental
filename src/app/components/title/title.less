@@ -1,0 +1,50 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.title {
+  font-weight: 700;
+
+  .media(@md, {
+    text-align: center;
+  });
+
+  &--main {
+    .rem(60);
+
+    .media(@xl, {
+      .rem(48);
+    });
+
+    .media(@lg, {
+      .rem(36);
+    });
+
+    .media(@sm, {
+      .rem(30);
+    });
+  }
+
+  &--other {
+    .rem(50);
+
+    .media(@xl, {
+      .rem(44);
+    });
+
+    .media(@lg, {
+      .rem(32);
+    });
+
+    .media(@sm, {
+      .rem(26);
+    });
+  }
+
+  &--black {
+    color: @black;
+  }
+
+  &--white {
+    color: @white;
+  }
+}
