@@ -25,6 +25,21 @@
   padding: 60px 0;
 }
 
+.grid(@gap: 24px, @justify-items: normal) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: @gap;
+
+  .media(@lg, {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: @justify-items;
+  });
+
+  .media(@md, {
+    grid-template-columns: 1fr;
+  });
+}
+
 .flex-between(@gap: 10px, @align-items: center) {
   display: flex;
   align-items: @align-items;
