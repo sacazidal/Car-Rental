@@ -1,0 +1,89 @@
+@import url(../../../styles/variables.less);
+@import url(../../../styles/mixins.less);
+
+.banner {
+  &__image {
+    position: absolute;
+
+    &-car {
+    }
+
+    &-protector {
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__header {
+    .flex-column(20px);
+    align-items: center;
+    margin-bottom: 80px;
+    z-index: 11;
+
+    .media(@lg, {
+      margin-bottom: 40px;
+    });
+  }
+
+  &__subtitle {
+    .subtitle(@white);
+
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    .media(@lg, {
+      flex-wrap: wrap;
+      justify-content: center;
+    });
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    border-radius: @rounded-lg;
+    background: @white;
+    width: 100%;
+    max-width: 240px;
+    z-index: 11;
+
+    .media(@xl, {
+      padding: 12px;
+      gap: 10px;
+    });
+
+    &-image {
+      .flex-center();
+      background: @orange;
+      padding: 14px 16px;
+      border-radius: @rounded-md;
+
+      .media(@lg, {
+        padding: 4px 6px;
+      });
+    }
+
+    &-info {
+      .flex-column(8px);
+
+      .media(@lg, {
+        gap: 4px;
+      });
+    }
+
+    &-title {
+      .title-lg(700);
+    }
+
+    &-subtitle {
+      .subtitle(@gray);
+      font-weight: 600;
+    }
+  }
+}

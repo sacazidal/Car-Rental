@@ -1,0 +1,30 @@
+<app-section-wrapper>
+  <!-- <img class="banner__image banner__image-car" src="/assets/images/facts/car1.svg" alt="car" /> -->
+  <img
+    class="banner__image banner__image-protector"
+    src="/assets/images/facts/protector.svg"
+    alt="protector"
+  />
+
+  <div class="banner__header">
+    <app-title title="Facts in numbers" colorStyle="white" />
+    <p class="banner__subtitle">
+      Amet cras hac orci lacus. Faucibus ipsum arcu lectus nibh sapien bibendum ullamcorper in. Diam
+      tincidunt tincidunt erat at semper fermentum
+    </p>
+  </div>
+
+  <div class="banner__list">
+    @for (fact of facts; track fact.id) {
+      <div class="banner__item">
+        <div class="banner__item-image">
+          <img [src]="fact.image" [alt]="fact.subtitle" />
+        </div>
+        <div class="banner__item-info">
+          <h5 class="banner__item-title">{{ fact.title }}</h5>
+          <p class="banner__item-subtitle">{{ fact.subtitle }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</app-section-wrapper>
