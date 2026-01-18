@@ -5,6 +5,7 @@ import { InfoComponent } from '../../components/info/info';
 import { CarsPreviewComponent } from '../../components/cars-preview/cars-preview';
 import { FactsComponent } from '../../components/facts/facts';
 import { CitySearchComponent } from '../../components/city-search/city-search';
+import { MobileAppComponent } from '../../components/mobile-app/mobile-app';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { CitySearchComponent } from '../../components/city-search/city-search';
     CarsPreviewComponent,
     FactsComponent,
     CitySearchComponent,
+    MobileAppComponent,
   ],
   templateUrl: './home.html',
   styleUrl: './home.less',
