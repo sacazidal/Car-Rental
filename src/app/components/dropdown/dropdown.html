@@ -1,0 +1,23 @@
+<div
+  class="dropdown"
+  [class.dropdown--active]="isOpen"
+  [class.dropdown--invalid]="control.invalid && control.touched"
+>
+  <button (click)="toggleDropdown()" type="button">
+    <img src="/assets/images/ArrowDown.svg" alt="ArrowDown" />
+  </button>
+
+  <button class="dropdown__title" type="button" (click)="toggleDropdown()">
+    {{ value }}
+  </button>
+
+  @if (isOpen && availableOptions.length > 0) {
+    <div class="dropdown__content">
+      <ul class="dropdown__list" (click)="setValue($event)">
+        @for (option of availableOptions; track option.id) {
+          <li class="dropdown__item">{{ option.name }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>

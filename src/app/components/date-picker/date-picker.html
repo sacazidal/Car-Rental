@@ -1,1 +1,6 @@
-<input [class]="`date-pick date-pick--${backgroundStyle}`" type="date" placeholder="ss" />
+<input
+  [class]="`date-pick date-pick--${backgroundStyle}`"
+  [class.date-pick--invalid]="control.invalid && control.touched"
+  type="date"
+  [formControl]="control"
+/>

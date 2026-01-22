@@ -1,11 +1,11 @@
-<form [class]="`form form--${backgroundStyle}`">
+<form [class]="`form form--${backgroundStyle}`" (ngSubmit)="onSubmit()" [formGroup]="form">
   <p [class]="`form__title ${colorStyle}`">Book your car</p>
   <div class="form__group">
-    <app-select desc="Car type"></app-select>
-    <app-select desc="Place of rental"></app-select>
-    <app-select desc="Place of return"></app-select>
-    <app-date-picker></app-date-picker>
-    <app-date-picker></app-date-picker>
+    <app-dropdown [control]="form.controls.car" value="Car type"></app-dropdown>
+    <app-dropdown [control]="form.controls.rental_place" value="Place of rental"></app-dropdown>
+    <app-dropdown [control]="form.controls.return_place" value="Place of return"></app-dropdown>
+    <app-date-picker [control]="form.controls.rental_date"></app-date-picker>
+    <app-date-picker [control]="form.controls.return_date"></app-date-picker>
   </div>
   <app-button type="submit" [full]="true" text="Book now"></app-button>
 </form>

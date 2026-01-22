@@ -3,17 +3,27 @@
 
 .date-pick {
   width: 100%;
-  padding: 9px 16px;
+  padding: 7px 16px;
   line-height: 125%;
   .subtitle();
   border-radius: @rounded-md;
-  border: none;
   height: 36px;
+  border: 2px solid transparent;
 
   &::-webkit-calendar-picker-indicator {
     margin: 0;
     padding: 0;
     opacity: 1;
+  }
+
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+  }
+
+  &--invalid {
+    border: 2px solid red;
   }
 
   &--gray {
